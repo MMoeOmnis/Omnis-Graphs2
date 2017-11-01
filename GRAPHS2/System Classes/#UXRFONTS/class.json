@@ -1,0 +1,21 @@
+{
+	"classtype": "kSystemtable",
+	"internalversion": 3,
+	"properties": {
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2016-12-13 14:53:29",
+		"desc": "",
+		"external": false,
+		"moddate": "2007-04-16 10:58:10",
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": "1"
+	},
+	"fonts": [
+		"Luxi Sans",
+		"Luxi Mono",
+		"Luxi Serif",
+		"Luxi Sans",
+		"Luxi Serif"
+	]
+}
