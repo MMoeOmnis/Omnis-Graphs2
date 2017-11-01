@@ -1,0 +1,6 @@
+On evClick     ;; Event Parameters - pRow( Itemreference )
+	Do $cinst.$objs.xyGraph.$plotareacolorstart.$assign($cobj.$contents)
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

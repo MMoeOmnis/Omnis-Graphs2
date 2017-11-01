@@ -1,0 +1,12 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+	Do iLayerEffectList.$loadcols()
+	If iLayerEffect=kG2effectNone
+		Do $cinst.$objs.layereffectalign.$visible.$assign(kFalse)
+	Else
+		Do $cinst.$objs.layereffectalign.$visible.$assign(kTrue)
+	End If
+	Do $cinst.$objs.xyGraph.$layereffect.$assign([iLayerEffect])
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

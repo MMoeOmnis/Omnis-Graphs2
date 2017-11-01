@@ -1,0 +1,11 @@
+On evNewValue
+	Do $cinst.$objs.xyGraph.$3ddepth.$assign(pNewVal)
+	
+	;  Resize graph as $3ddepth changes
+	Do $cinst.$objs.xyGraph.$offsetwidth.$assign(pNewVal)
+	Do $cinst.$objs.xyGraph.$offsetheight.$assign(pNewVal)
+	Do $cinst.$objs.xyGraph.$offsety.$assign(pNewVal)
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

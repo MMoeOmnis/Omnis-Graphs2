@@ -1,0 +1,12 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+	If iTransparent
+		Calculate lColorList as $cinst.$objs.xyGraph.$getcolors(kG2paletteTransparent)
+		Do $cinst.$objs.xyGraph.$setcolors(lColorList)
+	Else
+		Calculate lColorList as $cinst.$objs.xyGraph.$getcolors(kG2paletteDefault)
+		Do $cinst.$objs.xyGraph.$setcolors(lColorList)
+	End If
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

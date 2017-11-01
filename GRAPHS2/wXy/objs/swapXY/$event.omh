@@ -1,0 +1,8 @@
+On evClick
+	Do $cinst.$objs.xyGraph.$swapxy.$assign(iSwapXY)
+	;  Rotate X-Axis labels dependent on the value of iSwapXY
+	Do $cinst.$objs.xyGraph.$xlabelfontangle.$assign(iSwapXY*90)
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

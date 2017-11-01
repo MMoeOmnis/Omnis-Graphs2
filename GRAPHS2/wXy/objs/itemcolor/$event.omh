@@ -1,0 +1,10 @@
+On evClick     ;; Event Parameters - pRow( Itemreference )
+	Do $cinst.$objs.xyGraph.$getcolors() Returns lColorList
+	Do lColorList.$redefine(lBarColor)
+	;  The Barcolors start from the 8th line in the list returned
+	Do lColorList.[8+iItem].lBarColor.$assign($cobj.$contents)
+	Do $cinst.$objs.xyGraph.$setcolors(lColorList) Returns lColorList
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

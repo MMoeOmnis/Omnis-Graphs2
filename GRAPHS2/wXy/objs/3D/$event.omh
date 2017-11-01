@@ -1,0 +1,19 @@
+On evClick
+	Do $cinst.$objs.xyGraph.$3d.$assign(i3D)
+	Do $cinst.$objs.//3DSlider//.$visible.$assign(i3D)
+	
+	If i3D
+		;  Resize the graph depending on the value of 3dslider
+		Do $cinst.$objs.xyGraph.$offsetwidth.$assign($cinst.$objs.//3dslider//.$val)
+		Do $cinst.$objs.xyGraph.$offsetheight.$assign($cinst.$objs.//3dslider//.$val)
+		Do $cinst.$objs.xyGraph.$offsety.$assign($cinst.$objs.//3dslider//.$val)
+	Else     ;; not(i3D)
+		;  Reset graph size
+		Do $cinst.$objs.xyGraph.$offsetwidth.$assign(0)
+		Do $cinst.$objs.xyGraph.$offsetheight.$assign(0)
+		Do $cinst.$objs.xyGraph.$offsety.$assign(0)
+	End If
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

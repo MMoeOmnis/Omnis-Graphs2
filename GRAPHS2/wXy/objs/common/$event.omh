@@ -1,0 +1,4 @@
+On evRMouseDown
+	;  set to current window
+	Set reference lObjItemRef to $clib.$windows.xy
+	Do $cwind.$setItemRef(lObjItemRef)

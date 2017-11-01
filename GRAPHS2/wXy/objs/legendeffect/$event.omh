@@ -1,0 +1,7 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+	Do iLegendEffectList.$loadcols()
+	Do $cinst.$objs.xyGraph.$legendbackgroundeffect.$assign([iBGEffect])
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

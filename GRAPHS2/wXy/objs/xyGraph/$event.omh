@@ -1,0 +1,11 @@
+On evGraphClick
+	Calculate iItem as pItem
+	Do $cobj.$getcolors() Returns lColorList
+	Do lColorList.$redefine(lBarColor)
+	Do lColorList.$line.$assign(8+iItem)
+	Do lColorList.$loadcols()
+	Do $cinst.$objs.itemcolor.$contents.$assign(lBarColor)
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)
