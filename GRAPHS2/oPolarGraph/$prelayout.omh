@@ -1,0 +1,56 @@
+;  Set-up data for the 2nd set
+Do lLayerList.$define(lLabel,lAngle,lRadius)
+Do lLayerList.$add("",8.1,0)
+Do lLayerList.$add("",2.5,15)
+Do lLayerList.$add("",5,30)
+Do lLayerList.$add("",5.2,45)
+Do lLayerList.$add("",6.5,60)
+Do lLayerList.$add("",8.5,75)
+Do lLayerList.$add("",9.0,90)
+Do lLayerList.$add("",7.6,105)
+Do lLayerList.$add("",8.7,120)
+Do lLayerList.$add("",6.4,135)
+Do lLayerList.$add("",5.5,150)
+Do lLayerList.$add("",5.4,165)
+Do lLayerList.$add("",3.0,180)
+Do lLayerList.$add("",8.7,195)
+Do lLayerList.$add("",7.1,210)
+Do lLayerList.$add("",8.8,225)
+Do lLayerList.$add("",7.9,240)
+Do lLayerList.$add("",2.2,255)
+Do lLayerList.$add("",5.0,270)
+Do lLayerList.$add("",4.0,285)
+Do lLayerList.$add("",1.5,300)
+Do lLayerList.$add("",7.5,315)
+Do lLayerList.$add("",8.3,330)
+Do lLayerList.$add("",9.0,345)
+Do $cinst.$setlinearscale(kG2axisAngular,0,360,30)
+
+;  Set-up headings for second set
+Do iColList.$define(lSetName)
+Do iColList.$add('Set 2')
+Do $cinst.$columnheadings.$assign('iColList')
+
+;  Set the 2nd layer to the same type as the main layer
+Switch iPolarType
+	Case kG2polarArea
+		Do $cinst.$addarealayer(lLayerList) Returns lAddedLayer
+	Case kG2polarLine
+		Do $cinst.$addlinelayer(lLayerList) Returns lAddedLayer
+	Case kG2polarSplineArea
+		Do $cinst.$addsplinearealayer(lLayerList) Returns lAddedLayer
+	Case kG2polarSplineLine
+		Do $cinst.$addsplinelinelayer(lLayerList) Returns lAddedLayer
+End Switch
+
+;  Get the main layer object
+Do $cinst.$getmainlayer() Returns lMainLayer
+
+Do lMainLayer.$setlinewidth(iLineWidth)
+Do lAddedLayer.$setlinewidth(iLineWidth)
+
+Do lMainLayer.$setsymbol([iSymbol],10)
+Do lAddedLayer.$setsymbol([iSymbol],10)
+
+Do iColList.$define(lSetName)
+Do iColList.$add('Set 1')

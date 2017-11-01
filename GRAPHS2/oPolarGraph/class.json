@@ -1,0 +1,64 @@
+{
+	"classtype": "kObjectclass",
+	"internalversion": 3,
+	"superclass": ".Graph2 Library.Graph2",
+	"designtaskname": "Startup_Task",
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "iColList",
+			"order": 1,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iFirstDraw",
+			"order": 4,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kTrue"
+		},
+		{
+			"name": "iLineWidth",
+			"order": 3,
+			"type": "kInteger",
+			"subtype": "kShortint",
+			"sublen": 0,
+			"initval": "1"
+		},
+		{
+			"name": "iPolarType",
+			"order": 2,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iSymbol",
+			"order": 5,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		}
+	],
+	"properties": {
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"createdate": "2016-12-13 14:53:51",
+		"desc": "",
+		"editor": "",
+		"editordata": "",
+		"external": true,
+		"issupercomponent": false,
+		"moddate": "2009-09-03 11:08:26",
+		"selfcontained": false,
+		"showascheckedout": false,
+		"userinfo": "",
+		"version": "1"
+	}
+}
