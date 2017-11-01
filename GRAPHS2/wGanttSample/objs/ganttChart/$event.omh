@@ -1,0 +1,8 @@
+On evPreLayout
+	Calculate lStartDate as dat("2004-8-6","Y-M-D")
+	Calculate lEndDate as dat("2004-11-22","Y-M-D")
+	Do $cinst.$objs.ganttChart.$getyaxis(kFalse) Returns lAxisObject
+	Do lAxisObject.$setdatescale(lStartDate,lEndDate,86400*7)     ;; Set to seven day ticks (86400=number of seconds in a day)
+	Do $cinst.$objs.ganttChart.$getxaxis(kFalse) Returns lAxisObject
+	Do lAxisObject.$setlabels(iGraphList)
+	Do lAxisObject.$setreverse(kTrue)

@@ -1,0 +1,11 @@
+Set current list iGraphList
+Define list {Name,#1,#2}
+Do method $addline ('Market Research',2004,8,16,14)
+Do method $addline ('Define Specifications',2004,8,30,14)
+Do method $addline ('Overall Architecture',2004,9,13,14)
+Do method $addline ('Project Planning',2004,9,20,14)
+Do method $addline ('Detail Design',2004,9,27,14)
+Do method $addline ('Software Development',2004,10,4,35)
+Do method $addline ('Test Plan',2004,10,25,14)
+Do method $addline ('Testing and QA',2004,11,1,21)
+Do method $addline ('User documentation',2004,11,8,14)

@@ -1,0 +1,6 @@
+Calculate Name as p1
+Calculate chartdate as dat(con(p2,"-",p3,"-",p4),"Y-M-D")
+Calculate #1 as $cinst.$objs.ganttChart.$convdate(chartdate)
+Calculate chartdate as dadd(kDay,p5,chartdate)
+Calculate #2 as $cinst.$objs.ganttChart.$convdate(chartdate)
+Add line to list
