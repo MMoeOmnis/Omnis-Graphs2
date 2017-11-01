@@ -1,0 +1,7 @@
+On evClick
+	Do iGraphObj.$swapxy.$assign(iSwapXy)
+	;  Rotate X-Axis labels to stop labels drawing partially off-screen
+	Do iGraphObj.$xlabelfontangle.$assign(iSwapXy*90)
+	
+	;  redraw graph
+	Do method getSnapShot

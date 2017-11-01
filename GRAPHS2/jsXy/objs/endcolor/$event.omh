@@ -1,0 +1,17 @@
+On evClick
+	Do iEndColorList.$loadcols()
+	Switch iColor
+		Case 'White'
+			Do iGraphObj.$plotareacolorend.$assign(rgb(255,255,255))
+		Case 'Red'
+			Do iGraphObj.$plotareacolorend.$assign(rgb(255,0,0))
+		Case 'Green'
+			Do iGraphObj.$plotareacolorend.$assign(rgb(0,255,0))
+		Case 'Blue'
+			Do iGraphObj.$plotareacolorend.$assign(rgb(0,0,255))
+		Case 'Black'
+			Do iGraphObj.$plotareacolorend.$assign(rgb(0,0,0))
+	End Switch
+	
+	;  redraw graph
+	Do method getSnapShot

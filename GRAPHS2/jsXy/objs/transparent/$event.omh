@@ -1,0 +1,12 @@
+On evClick
+	If iTransparent
+		Calculate lColorList as iGraphObj.$getcolors(kG2paletteTransparent)
+		Do iGraphObj.$setcolors(lColorList)
+		Do iItemColorList.$line.$assign(2)
+	Else
+		Calculate lColorList as iGraphObj.$getcolors(kG2paletteDefault)
+		Do iGraphObj.$setcolors(lColorList)
+	End If
+	
+	;  redraw graph
+	Do method getSnapShot

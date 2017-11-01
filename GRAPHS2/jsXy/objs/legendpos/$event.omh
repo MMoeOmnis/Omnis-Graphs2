@@ -1,0 +1,20 @@
+On evClick
+	Do iLegendPosList.$loadcols()
+	Do iGraphObj.$legendpos.$assign([iLegendPos])
+	
+	If iLegendPosList.$line<>1
+		;  Hide all legend properties
+		Do $cinst.$objs.legendeffect.$visible.$assign(kTrue)
+		Do $cinst.$objs.legendeffectlabel.$visible.$assign(kTrue)
+		Do $cinst.$objs.legendcolor.$visible.$assign(kTrue)
+		Do $cinst.$objs.legendcolorlabel.$visible.$assign(kTrue)
+	Else
+		;  Unhide all legend properties
+		Do $cinst.$objs.legendeffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffectlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendcolor.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendcolorlabel.$visible.$assign(kFalse)
+	End If
+	
+	;  redraw graph
+	Do method getSnapShot

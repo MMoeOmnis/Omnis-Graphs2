@@ -1,0 +1,63 @@
+On evClick
+	Do iGraphObj.$getcolors() Returns lColorList
+	Do lColorList.$redefine(lBarColor)
+	Do iItemColorList.$loadcols()
+	Switch iColor
+		
+		Case 'White'
+			If iTransparent
+				Calculate lColor as -2130706433
+			Else
+				Calculate lColor as rgb(255,255,255)
+			End If
+			
+		Case 'Red'
+			If iTransparent
+				Calculate lColor as -2147483393
+			Else
+				Calculate lColor as rgb(255,0,0)
+			End If
+			
+		Case 'Green'
+			If iTransparent
+				Calculate lColor as -2147418368
+			Else
+				Calculate lColor as rgb(0,255,0)
+			End If
+			
+		Case 'Blue'
+			If iTransparent
+				Calculate lColor as -2130771968
+			Else
+				Calculate lColor as rgb(0,0,255)
+			End If
+			
+		Case 'Yellow'
+			If iTransparent
+				Calculate lColor as -2147418113
+			Else
+				Calculate lColor as rgb(255,255,0)
+			End If
+			
+		Case 'Purple'
+			If iTransparent
+				Calculate lColor as -2139160449
+			Else
+				Calculate lColor as rgb(127,0,127)
+			End If
+			
+		Case 'Black'
+			If iTransparent
+				Calculate lColor as -2147483648
+			Else
+				Calculate lColor as rgb(0,0,0)
+			End If
+			
+	End Switch
+	;  The Barcolors start from the 9th line in the list returned
+	Do lColorList.[8+iItem].lBarColor.$assign(lColor)
+	
+	Do iGraphObj.$setcolors(lColorList) Returns lColorList
+	
+	;  redraw graph
+	Do method getSnapShot

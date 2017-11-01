@@ -1,0 +1,234 @@
+Switch iXYMinorType
+	
+	Case kG2xyBar
+		Do iGraphList.$define(lName,lRevenue,lExpenses)
+		Do iGraphList.$add('Andy',85000,20000)
+		Do iGraphList.$add('Sam',80000,15000)
+		Do iGraphList.$add('Lisa',92000,34000)
+		Do iGraphList.$add('Harry',45000,15000)
+		Do iColList.$define(lRevenue,lExpenses)
+		Do iColList.$add('Revenue','Expenses')
+		
+		;  Enable legend, datacombine, 3d properties
+		Do $cinst.$objs.legendpos.$visible.$assign(kTrue)
+		Do $cinst.$objs.legendposlabel.$visible.$assign(kTrue)
+		If iLegendPosList.$line<>1
+			Do $cinst.$objs.legendeffect.$visible.$assign(kTrue)
+			Do $cinst.$objs.legendeffectlabel.$visible.$assign(kTrue)
+			Do $cinst.$objs.legendcolor.$visible.$assign(kTrue)
+			Do $cinst.$objs.legendcolorlabel.$visible.$assign(kTrue)
+		End If
+		Do $cinst.$objs.//3D//.$visible.$assign(kTrue)
+		Do $cinst.$objs.//3dslider//.$visible.$assign(i3D)
+		Do $cinst.$objs.datacombine.$visible.$assign(kTrue)
+		;  Enable itemcolor, transparent
+		Do $cinst.$objs.itemcolor.$visible.$assign(kTrue)
+		Do $cinst.$objs.itemcolorlabel.$visible.$assign(kTrue)
+		Do $cinst.$objs.transparent.$visible.$assign(kTrue)
+		;  Enable layer effects
+		Do $cinst.$objs.layereffect.$visible.$assign(kTrue)
+		Do $cinst.$objs.layereffectlabel.$visible.$assign(kTrue)
+		Do $cinst.$objs.layereffectalign.$visible.$assign(kTrue)
+		Do $cinst.$objs.layereffectalignlabel.$visible.$assign(kTrue)
+		
+	Case kG2xyLine
+		Do iGraphList.$define(lName,#1,#2,#3,#4,#5,#6,#7,#8,#9,#10,#11,#12,#13,#14,#15,#16,#17,#18,#19,#20)
+		Do iGraphList.$add('Andy',30,28,40,55,75,68,54,60,50,62,75,65,75,91,60,55,53,35,50,29)
+		Do iGraphList.$add('Liza',48,52,65,62,30,68,54,60,50,28,40,55,75,62,75,65,75,35,50,42)
+		Do iColList.$define(#1,#2,#3,#4,#5,#6,#7,#8,#9,#10,#11,#12,#13,#14,#15,#16,#17,#18,#19,#20)
+		Do iColList.$add(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20)
+		
+		;  Enable legend, datacombine, 3d properties
+		Do $cinst.$objs.legendpos.$visible.$assign(kTrue)
+		Do $cinst.$objs.legendposlabel.$visible.$assign(kTrue)
+		If iLegendPosList.$line<>1
+			Do $cinst.$objs.legendeffect.$visible.$assign(kTrue)
+			Do $cinst.$objs.legendeffectlabel.$visible.$assign(kTrue)
+			Do $cinst.$objs.legendcolor.$visible.$assign(kTrue)
+			Do $cinst.$objs.legendcolorlabel.$visible.$assign(kTrue)
+		End If
+		Do $cinst.$objs.//3D//.$visible.$assign(kTrue)
+		Do $cinst.$objs.//3dslider//.$visible.$assign(i3D)
+		Do $cinst.$objs.datacombine.$visible.$assign(kTrue)
+		;  Enable itemcolor, transparent
+		Do $cinst.$objs.itemcolor.$visible.$assign(kTrue)
+		Do $cinst.$objs.itemcolorlabel.$visible.$assign(kTrue)
+		Do $cinst.$objs.transparent.$visible.$assign(kTrue)
+		;  Disable layer effects
+		Do $cinst.$objs.layereffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalign.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalignlabel.$visible.$assign(kFalse)
+		
+	Case kG2xyScatter
+		Do iGraphList.$define(lName,#1,#2,#3,#4)
+		Do iGraphList.$add('Pt1',10,130,5,100)
+		Do iGraphList.$add('Pt2',15,150,12,95)
+		Do iGraphList.$add('Pt3',6,80,8,105)
+		Do iGraphList.$add('Pt4',12,110,7,82)
+		Do iGraphList.$add('Pt5',10.5,125,10.5,99)
+		Do iColList.$define(#1,#2,#3,#4)
+		
+		;  Disable all legend, datacombine, 3d properties
+		Do $cinst.$objs.legendpos.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendposlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffectlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendcolor.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendcolorlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.//3D//.$visible.$assign(kFalse)
+		Do $cinst.$objs.//3dslider//.$visible.$assign(kFalse)
+		Do $cinst.$objs.datacombine.$visible.$assign(kFalse)
+		;  Enable itemcolor
+		Do $cinst.$objs.itemcolor.$visible.$assign(kTrue)
+		Do $cinst.$objs.itemcolorlabel.$visible.$assign(kTrue)
+		Do $cinst.$objs.transparent.$visible.$assign(kTrue)
+		;  Disable layer effects
+		Do $cinst.$objs.layereffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalign.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalignlabel.$visible.$assign(kFalse)
+		
+	Case kG2xyArea
+		Do iGraphList.$define(lName,#1,#2,#3,#4,#5,#6,#7,#8,#9,#10,#11,#12,#13,#14,#15,#16,#17,#18,#19,#20)
+		Do iGraphList.$add('Andy',30,28,40,55,75,68,54,60,50,62,75,65,75,91,60,55,53,35,50,66,56,48,52,65,62)
+		Do iGraphList.$add('Liza',48,52,65,62,30,68,54,60,50,28,40,55,75,62,75,65,75,35,50,66,56,91,60,55,53)
+		Do iColList.$define(#1,#2,#3,#4,#5,#6,#7,#8,#9,#10,#11,#12,#13,#14,#15,#16,#17,#18,#19,#20)
+		Do iColList.$add(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20)
+		
+		;  Enable legend, datacombine, 3d properties, itemcolor
+		Do $cinst.$objs.legendpos.$visible.$assign(kTrue)
+		Do $cinst.$objs.legendposlabel.$visible.$assign(kTrue)
+		If iLegendPosList.$line<>1
+			Do $cinst.$objs.legendeffect.$visible.$assign(kTrue)
+			Do $cinst.$objs.legendeffectlabel.$visible.$assign(kTrue)
+			Do $cinst.$objs.legendcolor.$visible.$assign(kTrue)
+			Do $cinst.$objs.legendcolorlabel.$visible.$assign(kTrue)
+		End If
+		Do $cinst.$objs.//3D//.$visible.$assign(kTrue)
+		Do $cinst.$objs.//3dslider//.$visible.$assign(i3D)
+		Do $cinst.$objs.datacombine.$visible.$assign(kTrue)
+		;  Enable itemcolor, transparent
+		Do $cinst.$objs.itemcolor.$visible.$assign(kTrue)
+		Do $cinst.$objs.itemcolorlabel.$visible.$assign(kTrue)
+		Do $cinst.$objs.transparent.$visible.$assign(kTrue)
+		;  Disable layer effects
+		Do $cinst.$objs.layereffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalign.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalignlabel.$visible.$assign(kFalse)
+		
+	Case kG2xyBoxWhisker
+		Do iGraphList.$define(lName,#1,#2,#3,#4,#5)
+		Do iGraphList.$add('line',55,70,80,40,62)
+		Do iGraphList.$add('line',60,80,90,45,70)
+		Do iGraphList.$add('line',50,65,75,40,60)
+		Do iGraphList.$add('line',38,53,60,20,40)
+		Do iGraphList.$add('line',38,53,60,20,40)
+		Do iGraphList.$add('line',60,78,85,50,70)
+		Do iGraphList.$add('line',51,69,80,25,62)
+		Do iGraphList.$add('line',60,76,84,44,70)
+		
+		;  Disable all legend, datacombine, 3d properties
+		Do $cinst.$objs.legendpos.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendposlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffectlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendcolor.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendcolorlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.//3D//.$visible.$assign(kFalse)
+		Do $cinst.$objs.//3dslider//.$visible.$assign(kFalse)
+		Do $cinst.$objs.datacombine.$visible.$assign(kFalse)
+		;  Enable itemcolor, transparent
+		Do $cinst.$objs.itemcolor.$visible.$assign(kTrue)
+		Do $cinst.$objs.itemcolorlabel.$visible.$assign(kTrue)
+		Do $cinst.$objs.transparent.$visible.$assign(kTrue)
+		;  Disable layer effects
+		Do $cinst.$objs.layereffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalign.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalignlabel.$visible.$assign(kFalse)
+		
+	Case kG2xyCandleStick,kG2xyHLOC
+		Do iGraphList.$define(lName,#1,#2,#3,#4)
+		Do iGraphList.$add('line',2043,1931,2000,1950)
+		Do iGraphList.$add('line',2039,1921,1957,1991)
+		Do iGraphList.$add('line',2076,1985,1993,2026)
+		Do iGraphList.$add('line',2064,2028,2037,2029)
+		Do iGraphList.$add('line',2048,1986,2018,2004)
+		Do iGraphList.$add('line',2058,1994,2021,2053)
+		Do iGraphList.$add('line',2070,1999,2045,2011)
+		Do iGraphList.$add('line',2033,1958,2009,1962)
+		Do iGraphList.$add('line',2027,1943,1959,1987)
+		Do iGraphList.$add('line',2029,1944,1985,2019)
+		Do iGraphList.$add('line',2071,1962,2008,2040)
+		Do iGraphList.$add('line',2085,2011,2048,2016)
+		Do iGraphList.$add('line',2034,1975,2006,1996)
+		Do iGraphList.$add('line',2031,1962,2010,1985)
+		Do iGraphList.$add('line',2056,1928,1971,2006)
+		Do iGraphList.$add('line',2128,2059,2080,2113)
+		Do iGraphList.$add('line',2180,2112,2116,2142)
+		Do iGraphList.$add('line',2183,2103,2137,2167)
+		Do iGraphList.$add('line',2192,2151,2170,2158)
+		Do iGraphList.$add('line',2213,2127,2172,2201)
+		Do iGraphList.$add('line',2230,2123,2171,2188)
+		Do iGraphList.$add('line',2281,2152,2191,2231)
+		Do iGraphList.$add('line',2272,2212,2240,2242)
+		
+		;  Disable all legend, datacombine, 3d properties
+		Do $cinst.$objs.legendpos.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendposlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffectlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendcolor.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendcolorlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.//3D//.$visible.$assign(kFalse)
+		Do $cinst.$objs.//3dslider//.$visible.$assign(kFalse)
+		Do $cinst.$objs.datacombine.$visible.$assign(kFalse)
+		;  Disable layer effects
+		Do $cinst.$objs.layereffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalign.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalignlabel.$visible.$assign(kFalse)
+		
+		If iXYMinorType=kG2xyCandleStick
+			;  Disable item color, transparent
+			Do $cinst.$objs.itemcolor.$visible.$assign(kFalse)
+			Do $cinst.$objs.itemcolorlabel.$visible.$assign(kFalse)
+			Do $cinst.$objs.transparent.$visible.$assign(kFalse)
+		Else     ;; kG2xyHLOC
+			;  Enable item color,transparent
+			Do $cinst.$objs.itemcolor.$visible.$assign(kTrue)
+			Do $cinst.$objs.itemcolorlabel.$visible.$assign(kTrue)
+			Do $cinst.$objs.transparent.$visible.$assign(kTrue)
+		End If
+		
+	Case kG2xyTrend
+		Do iGraphList.$define(lName,#1,#2,#3,#4,#5,#6,#7,#8,#9,#10,#11,#12,#13,#14,#15,#16,#17,#18,#19,#20)
+		Do iGraphList.$add(0,50,55,47,34,42,49,63,62,73,59,56,50,64,60,67,67,58,59,73,77)
+		Do iColList.$define(#1,#2,#3,#4,#5,#6,#7,#8,#9,#10,#11,#12,#13,#14,#15,#16,#17,#18,#19,#20)
+		Do iColList.$add(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20)
+		
+		;  Disable all legend, datacombine, 3d properties
+		Do $cinst.$objs.legendpos.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendposlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffectlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendcolor.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendcolorlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.//3D//.$visible.$assign(kFalse)
+		Do $cinst.$objs.//3dslider//.$visible.$assign(i3D)
+		Do $cinst.$objs.datacombine.$visible.$assign(kFalse)
+		;  Enable item color, transparent
+		Do $cinst.$objs.itemcolor.$visible.$assign(kTrue)
+		Do $cinst.$objs.itemcolorlabel.$visible.$assign(kTrue)
+		Do $cinst.$objs.transparent.$visible.$assign(kTrue)
+		;  Disable layer effects
+		Do $cinst.$objs.layereffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalign.$visible.$assign(kFalse)
+		Do $cinst.$objs.layereffectalignlabel.$visible.$assign(kFalse)
+		
+End Switch
+
+Do iGraphObj.$dataname.$assign(iGraphList)

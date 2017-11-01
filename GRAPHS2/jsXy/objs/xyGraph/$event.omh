@@ -1,0 +1,34 @@
+On evClick
+	;  Unhide color picker
+	Do $cinst.$objs.itemcolor.$visible.$assign(kTrue)
+	
+	;  Get the graph object where the mouse was clicked
+	Do iGraphObj.$findobject(pMouseX,pMouseY,lSet,iItem) Returns lObjectFound
+	
+	;  If an object was found determine color
+	If lObjectFound
+		Do iGraphObj.$getcolors() Returns lColorList
+		Do lColorList.$redefine(lBarColor)
+		;  Item colors start from the 9th line in the colorlist returned
+		Do lColorList.$line.$assign(8+iItem)
+		Do lColorList.$loadcols()
+		
+		Switch lBarColor
+			Case 16777215,-2130706433     ;; white, transparent whtie
+				Do iItemColorList.$line.$assign(1)
+			Case 255,-2147483393     ;; red, transparent red
+				Do iItemColorList.$line.$assign(2)
+			Case 65280,-2147418368     ;; green, transparent green
+				Do iItemColorList.$line.$assign(3)
+			Case 16711680,-2130771968     ;; blue, transparent blue
+				Do iItemColorList.$line.$assign(4)
+			Case 65535,-2147418113     ;; yellow, transparent yellow
+				Do iItemColorList.$line.$assign(5)
+			Case 8323199,-2139160449     ;; purple, transparent purple
+				Do iItemColorList.$line.$assign(6)
+			Case 0,-2147483648     ;; black, transparent black
+				Do iItemColorList.$line.$assign(7)
+		End Switch
+	End If
+	
+	Do $cinst.$redraw()

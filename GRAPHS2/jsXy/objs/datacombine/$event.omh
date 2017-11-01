@@ -1,0 +1,6 @@
+On evClick
+	Do iDataCombineList.$loadcols()
+	Do iGraphObj.$datacombine.$assign([iDataCombine])
+	
+	;  redraw graph
+	Do method getSnapShot

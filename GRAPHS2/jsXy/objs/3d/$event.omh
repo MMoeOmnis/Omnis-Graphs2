@@ -1,0 +1,18 @@
+On evClick
+	Do iGraphObj.$3d.$assign(i3D)
+	Do $cinst.$objs.//3dslider//.$visible.$assign(i3D)
+	
+	If i3D
+		;  Resize the graph depending on the value of 3dslider
+		Do iGraphObj.$offsetwidth.$assign(i3DVal)
+		Do iGraphObj.$offsetheight.$assign(i3DVal)
+		Do iGraphObj.$offsety.$assign(i3DVal)
+	Else     ;; not(i3D)
+		;  Reset graph size
+		Do iGraphObj.$offsetwidth.$assign(0)
+		Do iGraphObj.$offsetheight.$assign(0)
+		Do iGraphObj.$offsety.$assign(0)
+	End If
+	
+	;  redraw graph
+	Do method getSnapShot

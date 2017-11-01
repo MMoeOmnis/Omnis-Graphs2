@@ -1,0 +1,7 @@
+On evClick
+	Do iXYMinorTypeList.$loadcols()
+	Do method $graphList
+	Do iGraphObj.$minorxytype.$assign([iXYMinorType])
+	
+	;  redraw graph
+	Do method getSnapShot

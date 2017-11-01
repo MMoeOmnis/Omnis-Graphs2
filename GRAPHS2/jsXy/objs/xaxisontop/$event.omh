@@ -1,0 +1,5 @@
+On evClick
+	Do iGraphObj.$xaxisontop.$assign(iXAxisOnTop)
+	
+	;  redraw graph
+	Do method getSnapShot

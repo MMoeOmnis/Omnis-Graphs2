@@ -1,0 +1,6 @@
+On evClick
+	Do iLegendEffectList.$loadcols()
+	Do iGraphObj.$legendbackgroundeffect.$assign([iBGEffect])
+	
+	;  redraw graph
+	Do method getSnapShot

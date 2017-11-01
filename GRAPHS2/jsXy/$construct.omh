@@ -1,0 +1,147 @@
+;  Enter your initialization code here
+;  Set-up the Meter Minor type selection dropdown list
+Do iXYMinorTypeList.$define(iXYMinorType)
+Do iXYMinorTypeList.$add(kG2xyArea)
+Do iXYMinorTypeList.$add(kG2xyBar)
+Do iXYMinorTypeList.$add(kG2xyBoxWhisker)
+Do iXYMinorTypeList.$add(kG2xyCandleStick)
+Do iXYMinorTypeList.$add(kG2xyHLOC)
+Do iXYMinorTypeList.$add(kG2xyLine)
+Do iXYMinorTypeList.$add(kG2xyScatter)
+Do iXYMinorTypeList.$add(kG2xyTrend)
+Do iXYMinorTypeList.$line.$assign(2)
+Do iXYMinorTypeList.$loadcols()
+
+;  Set-up the background color effect selection dropdown list
+Do iBGEffectList.$define(iBGEffect)
+Do iBGEffectList.$add(kG2colorMetal)
+Do iBGEffectList.$add(kG2colorSolid)
+Do iBGEffectList.$first()
+
+;  Set-up the Background Raised combo box list
+Do iBackgroundRaisedList.$define(iBackgroundRaised)
+For iBackgroundRaised from -5 to 5 step 1     ;; values -5->5
+	Do iBackgroundRaisedList.$add(iBackgroundRaised)
+End For
+Do iBackgroundRaisedList.$line.$assign(6)
+Do iBackgroundRaisedList.$loadcols(iBackgroundRaised)     ;; used for ring calculations
+
+;  Set-up backcolor list
+Do iBackColorList.$define(iColor)
+Do iBackColorList.$add('White')
+Do iBackColorList.$add('Red')
+Do iBackColorList.$add('Green')
+Do iBackColorList.$add('Blue')
+Do iBackColorList.$add('Black')
+Do iBackColorList.$line.$assign(1)
+
+Do iItemColorList.$define(iColor)
+Do iItemColorList.$add('White')
+Do iItemColorList.$add('Red')
+Do iItemColorList.$add('Green')
+Do iItemColorList.$add('Blue')
+Do iItemColorList.$add('Yellow')
+Do iItemColorList.$add('Purple')
+Do iItemColorList.$add('Black')
+Do iItemColorList.$line.$assign(2)
+
+;  Set-up bordercolor list
+Do iBorderColorList.$define(iColor)
+Do iBorderColorList.$add('White')
+Do iBorderColorList.$add('Red')
+Do iBorderColorList.$add('Green')
+Do iBorderColorList.$add('Blue')
+Do iBorderColorList.$add('Black')
+Do iBorderColorList.$line.$assign(1)
+
+;  Set-up bordercolor list
+Do iLegendColorList.$define(iColor)
+Do iLegendColorList.$add('White')
+Do iLegendColorList.$add('Red')
+Do iLegendColorList.$add('Green')
+Do iLegendColorList.$add('Blue')
+Do iLegendColorList.$add('Black')
+Do iLegendColorList.$line.$assign(1)
+
+;  Set-up start color list
+Do iStartColorList.$define(iColor)
+Do iStartColorList.$add('White')
+Do iStartColorList.$add('Red')
+Do iStartColorList.$add('Green')
+Do iStartColorList.$add('Blue')
+Do iStartColorList.$add('Black')
+Do iStartColorList.$line.$assign(1)
+
+;  Set-up end color list
+Do iEndColorList.$define(iColor)
+Do iEndColorList.$add('White')
+Do iEndColorList.$add('Red')
+Do iEndColorList.$add('Green')
+Do iEndColorList.$add('Blue')
+Do iEndColorList.$add('Black')
+Do iEndColorList.$line.$assign(5)
+
+;  Set-up data combine list
+Do iDataCombineList.$define(iDataCombine)
+Do iDataCombineList.$add(kG2dataSide)
+Do iDataCombineList.$add(kG2dataStack)
+Do iDataCombineList.$add(kG2dataOverlay)
+Do iDataCombineList.$add(kG2dataPercentage)
+Do iDataCombineList.$line.$assign(1)
+
+;  Setup legenpos values
+Do iLegendPosList.$define(iLegendPos)
+Do iLegendPosList.$add(kG2legendNone)
+Do iLegendPosList.$add(kG2legendBottom)
+Do iLegendPosList.$add(kG2legendLeft)
+;  Do iLegendPos.$add(kG2legendManual)
+Do iLegendPosList.$add(kG2legendRight)
+Do iLegendPosList.$add(kG2legendTop)
+Do iLegendPosList.$line.$assign(1)
+
+;  Set-up the legend background color effect list
+Do iLegendEffectList.$define(iBGEffect)
+Do iLegendEffectList.$add(kG2colorMetal)
+Do iLegendEffectList.$add(kG2colorSolid)
+Do iLegendEffectList.$line.$assign(2)
+
+;  Set-up layer effect list
+Do iLayerEffectList.$define(iLayerEffect)
+Do iLayerEffectList.$add(kG2effectNone)
+Do iLayerEffectList.$add(kG2effectGlass)
+Do iLayerEffectList.$add(kG2effectSoftLight)
+Do iLayerEffectList.$line.$assign(2)
+
+;  Set-up layer effect align list
+Do iLayerEffectAlignList.$define(iLayerEffect)
+Do iLayerEffectAlignList.$add(kG2alignBottom)
+Do iLayerEffectAlignList.$add(kG2alignLeft)
+Do iLayerEffectAlignList.$add(kG2alignRight)
+Do iLayerEffectAlignList.$add(kG2alignTop)
+Do iLayerEffectAlignList.$line.$assign(1)
+
+;  Set-up initial graph properties
+Do iGraphObj.$majortype.$assign(kG2xyBar)
+Do iGraphObj.$minormetertype.$assign(kG2xyBar)
+Do iGraphObj.$columnheadings.$assign('iColList')
+Do iGraphObj.$3ddepth.$assign(5)
+Do iGraphObj.$maintitle.$assign('Sample X-Y Graph')
+Do iGraphObj.$legendpos.$assign(kG2legendNone)
+Do iGraphObj.$backgroundcolor.$assign(rgb(255,255,255))
+Do iGraphObj.$backgroundeffect.$assign(kG2colorMetal)
+Do iGraphObj.$plotareacolorstart.$assign(rgb(255,255,255))
+Do iGraphObj.$plotareacolorend.$assign(rgb(0,0,0))
+Do iGraphObj.$layereffect.$assign(kG2effectGlass)
+Do iGraphObj.$layereffectalign.$assign(kG2alignBottom)
+
+;  Set-up the colors of the graph
+Do iGraphObj.$getcolors() Returns lColorList
+Do lColorList.$redefine(lColor)
+Do lColorList.9.lColor.$assign(rgb(255,0,0))
+Do lColorList.10.lColor.$assign(rgb(0,255,0))
+Do lColorList.11.lColor.$assign(rgb(0,0,255))
+Do lColorList.12.lColor.$assign(rgb(255,255,0))
+Do iGraphObj.$setcolors(lColorList)
+
+Do method $graphList
+Do method getSnapShot

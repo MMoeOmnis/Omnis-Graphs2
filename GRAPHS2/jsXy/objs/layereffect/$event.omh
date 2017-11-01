@@ -1,0 +1,6 @@
+On evClick
+	Do iLayerEffectList.$loadcols()
+	Do iGraphObj.$layereffect.$assign([iLayerEffect])
+	
+	;  redraw graph
+	Do method getSnapShot

@@ -1,0 +1,12 @@
+On evNewValue
+	Do iGraphObj.$3ddepth.$assign(pSliderValue)
+	
+	;  Resize the graph object so that it doesn't draw partially off-screen
+	Do iGraphObj.$offsetwidth.$assign(pSliderValue)
+	Do iGraphObj.$offsetheight.$assign(pSliderValue)
+	Do iGraphObj.$offsety.$assign(pSliderValue)
+	Calculate i3DVal as pSliderValue
+	
+On evEndSlider
+	;  redraw graph
+	Do method getSnapShot

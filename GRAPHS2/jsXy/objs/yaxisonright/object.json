@@ -1,0 +1,50 @@
+{
+	"ident": 1024,
+	"order": 23,
+	"objtype": "kComponent",
+	"componentlib": "jsCheckbox",
+	"componentctrl": "Checkbox Control",
+	"properties": {
+		"alpha": 255,
+		"backalpha": 255,
+		"backcolor": "RGB(255,255,255)",
+		"bordercolor": "kColorDefault",
+		"contextmenu": "",
+		"cssclassname": "",
+		"dataname": "iYAxisOnRight",
+		"desgroup": 0,
+		"designactive": true,
+		"deslock": false,
+		"disabledefaultcontextmenu": false,
+		"disablesystemfocus": false,
+		"dropmode": "kAcceptNone",
+		"effect": "kJSborderNone",
+		"enabled": true,
+		"events": "evClick",
+		"fieldstyle": "",
+		"font": 1,
+		"fontsize": 10,
+		"fontstyle": "kPlain",
+		"iconid": 0,
+		"linestyle": 1,
+		"objlink": 0,
+		"preventlayoutanimation": false,
+		"text": "Y Axis on Right",
+		"textcolor": "kColorWindowText",
+		"tooltip": "",
+		"userinfo": "",
+		"visible": true
+	},
+	"screensizes": [
+		{
+			"name": "kSSZDesktop",
+			"left": 515,
+			"top": 205,
+			"width": 130,
+			"height": 20,
+			"edgefloat": "kEFnone",
+			"dragborder": false,
+			"errortextpos": "kJSErrorTextPosUnder"
+		}
+	]
+}

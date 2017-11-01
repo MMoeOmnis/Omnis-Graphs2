@@ -1,0 +1,48 @@
+[
+	{
+		"name": "$event",
+		"ident": 0,
+		"order": 1,
+		"clientexec": false,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "lBarColor",
+				"order": 2,
+				"type": "kInteger",
+				"subtype": "k32bitint",
+				"sublen": 0
+			},
+			{
+				"name": "lColorList",
+				"order": 1,
+				"type": "kList",
+				"subtype": "",
+				"sublen": 0
+			},
+			{
+				"name": "lItem",
+				"order": 5,
+				"type": "kInteger",
+				"subtype": "kShortint",
+				"sublen": 0
+			},
+			{
+				"name": "lObjectFound",
+				"order": 3,
+				"type": "kBoolean",
+				"subtype": 0,
+				"sublen": 0
+			},
+			{
+				"name": "lSet",
+				"order": 4,
+				"type": "kInteger",
+				"subtype": "kShortint",
+				"sublen": 0
+			}
+		]
+	}
+]
