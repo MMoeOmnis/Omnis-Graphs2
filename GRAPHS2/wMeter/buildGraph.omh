@@ -1,0 +1,42 @@
+Do iGraphList.$define(lCol1)
+
+Switch iMeterTypeList.$line
+	
+	Case 1     ;; kG2meterAngular
+		;  create data for the graph
+		Do iGraphList.$add(45.17)
+		Do iGraphList.$add(0)
+		Do iGraphList.$add(100)
+		Do iGraphList.$add(10)
+		Do iGraphList.$add(5)
+		Do iGraphList.$add(1)
+		
+		;  resize and center graph
+		Do $cinst.$objs.meterGraph.$width.$assign(480)
+		Do $cinst.$objs.meterGraph.$height.$assign(380)
+		Do $cinst.$objs.meterGraph.$left.$assign(15)
+		Do $cinst.$objs.meterGraph.$top.$assign(15)
+		
+		;  change minor type
+		Do $cinst.$objs.meterGraph.$minormetertype.$assign(kG2meterAngular)
+		
+	Case 2     ;; kG2meterLinear
+		
+		;  create data for the graph
+		Do iGraphList.$add(75.35)
+		Do iGraphList.$add(0)
+		Do iGraphList.$add(100)
+		Do iGraphList.$add(10)
+		
+		;  resize and center graph
+		Do $cinst.$objs.meterGraph.$width.$assign(480)
+		Do $cinst.$objs.meterGraph.$height.$assign(100)
+		Do $cinst.$objs.meterGraph.$left.$assign(15)
+		Do $cinst.$objs.meterGraph.$top.$assign(145)
+		
+		;  change minor type
+		Do $cinst.$objs.meterGraph.$minormetertype.$assign(kG2meterLinear)
+		
+End Switch
+
+Do $cinst.$redraw()

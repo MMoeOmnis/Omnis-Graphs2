@@ -1,0 +1,42 @@
+On evPreLayout
+	
+	Switch iMeterTypeList.$line
+		
+		Case 1     ;; kG2meterAngular
+			
+			;  set-up sector colors
+			Do $cinst.$objs.meterGraph.$addzone(0,60,kGreen)
+			Do $cinst.$objs.meterGraph.$addzone(60,80,kYellow)
+			Do $cinst.$objs.meterGraph.$addzone(80,100,kRed)
+			
+			;  conditionally add ring
+			If iRing
+				;  Factor in raiseborder value to make the ring resize
+				Do $cinst.$objs.meterGraph.$addring(173-abs(iBackgroundRaised),174-abs(iBackgroundRaised),$cinst.$objs.ringColor.$contents)
+			End If
+			
+			;  conditionally add text
+			If iAddText
+				Calculate lTextToAdd as $cinst.$objs.meterGraph.$formatvalue(45.17,"2")
+				Do $cinst.$objs.meterGraph.$addtext(lTextToAdd,255,225,"arialbd.ttf",8,kBlack,kG2alignBottomRight)
+			End If
+			
+		Case 2     ;; kG2meterLinear
+			
+			;  set-up sector colors
+			Do $cinst.$objs.meterGraph.$addzone(0,50,kGreen)
+			Do $cinst.$objs.meterGraph.$addzone(50,80,kYellow)
+			Do $cinst.$objs.meterGraph.$addzone(80,100,kRed)
+			
+			;  conditionally add text
+			If iAddText
+				Calculate lTextToAdd as $cinst.$objs.meterGraph.$formatvalue(75.35,"2")
+				Do $cinst.$objs.meterGraph.$addtext(lTextToAdd,345,70,"arialbd.ttf",8,kBlack,kG2alignBottomRight)
+				Do $cinst.$objs.meterGraph.$addtext("Temperature °C",10,68,"arialbd.ttf",8,kBlack,kG2alignBottomLeft)
+			End If
+			
+	End Switch
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)
