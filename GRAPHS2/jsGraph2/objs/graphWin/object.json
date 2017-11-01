@@ -1,0 +1,43 @@
+{
+	"ident": 1002,
+	"order": 1,
+	"objtype": "kSubwindow",
+	"properties": {
+		"alpha": 255,
+		"backalpha": 255,
+		"backcolor": "kColorWindow",
+		"bordercolor": "RGB(0,0,0)",
+		"classname": "jsXy",
+		"cssclassname": "",
+		"dataname": "",
+		"desgroup": 0,
+		"designactive": true,
+		"deslock": false,
+		"disablesystemfocus": false,
+		"effect": "kJSborderNone",
+		"enabled": true,
+		"events": "",
+		"horzscroll": false,
+		"linestyle": 1,
+		"multipleclasses": true,
+		"objlink": 0,
+		"parameters": "",
+		"preventlayoutanimation": false,
+		"tooltip": "",
+		"userinfo": "",
+		"vertscroll": false,
+		"visible": true
+	},
+	"screensizes": [
+		{
+			"name": "kSSZDesktop",
+			"left": 20,
+			"top": 60,
+			"width": 800,
+			"height": 420,
+			"edgefloat": "kEFnone",
+			"dragborder": false,
+			"errortextpos": "kJSErrorTextPosUnder"
+		}
+	]
+}

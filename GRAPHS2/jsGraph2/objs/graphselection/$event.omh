@@ -1,0 +1,11 @@
+On evTabSelected
+	Switch pTabNumber
+		Case 1
+			Do $cinst.$objs.graphWin.$classname.$assign('jsXy')
+		Case 2
+			Do $cinst.$objs.graphWin.$classname.$assign('jsPie')
+		Case 3
+			Do $cinst.$objs.graphWin.$classname.$assign('jsPolar')
+		Case 4
+			Do $cinst.$objs.graphWin.$classname.$assign('jsMeter')
+	End Switch
