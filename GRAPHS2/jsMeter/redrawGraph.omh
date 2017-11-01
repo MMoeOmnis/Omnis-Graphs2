@@ -1,0 +1,6 @@
+Switch iMeterTypeList.$line
+	Case 1     ;; kG2meterAngular
+		Do iGraphObj.$snapshot(480,380) Returns iGraphSnapshot
+	Case 2     ;; kG2meterLinear
+		Do iGraphObj.$snapshot(480,100) Returns iGraphSnapshot
+End Switch

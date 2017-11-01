@@ -1,0 +1,6 @@
+On evClick
+	Calculate iGraphObj.iRing as iAddRing
+	Do $cinst.$objs.ringcolor.$visible.$assign(iAddRing)
+	
+	;  redraw graph
+	Do method getSnapShot

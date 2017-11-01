@@ -1,0 +1,6 @@
+On evClick
+	Do iBGEffectList.$loadcols()
+	Do iGraphObj.$backgroundeffect.$assign([iBGEffect])
+	
+	;  redraw graph
+	Do method getSnapShot

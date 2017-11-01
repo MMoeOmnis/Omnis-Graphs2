@@ -1,0 +1,6 @@
+On evClick
+	Do iGraphObj.$roundedframe.$assign(iRoundedFrame)
+	Do iGraphObj.$snapshot(480,380) Returns iGraphSnapshot
+	
+	;  redraw graph
+	Do method getSnapShot

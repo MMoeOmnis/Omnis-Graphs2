@@ -1,0 +1,201 @@
+{
+	"classtype": "kRemoteForm",
+	"internalversion": 3,
+	"designtaskname": "rtGraph2",
+	"nextident": 1016,
+	"lastgroupident": 0,
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "iAddRing",
+			"order": 6,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iAddText",
+			"order": 5,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iBackColorList",
+			"order": 4,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iBackgroundRaised",
+			"order": 9,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "0"
+		},
+		{
+			"name": "iBackgroundRaisedList",
+			"order": 10,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iBGEffect",
+			"order": 12,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iBGEffectList",
+			"order": 13,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iBorderColorList",
+			"order": 2,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iColor",
+			"order": 3,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iGraphList",
+			"order": 8,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iGraphObj",
+			"order": 16,
+			"type": "kObject",
+			"subtype": "oMeterGraph",
+			"sublen": 0
+		},
+		{
+			"name": "iGraphSnapshot",
+			"order": 7,
+			"type": "kPicture",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iMeterType",
+			"order": 14,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iMeterTypeList",
+			"order": 15,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iRingColorList",
+			"order": 1,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iRoundedFrame",
+			"order": 11,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "kTrue"
+		}
+	],
+	"properties": {
+		"aligntogrid": false,
+		"alpha": 255,
+		"alwaysenabledobject": "",
+		"animatelayouttransitions": false,
+		"backalpha": 255,
+		"backcolor": "kColor3DFace",
+		"backpattern": 0,
+		"cancelkeyobject": "",
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"contextmenu": "",
+		"createdate": "2016-12-13 14:53:54",
+		"defaultappearance": "kAppearanceiOS",
+		"desc": "",
+		"designshowmobiletitle": true,
+		"disabledefaultcontextmenu": false,
+		"editor": "",
+		"editordata": "",
+		"events": "",
+		"external": true,
+		"forecolor": "RGB(255,255,255)",
+		"horzgrid": 8,
+		"horzscroll": false,
+		"inheritedorder": 0,
+		"issupercomponent": false,
+		"layouttype": "kLayoutTypeScreen",
+		"left": 276,
+		"moddate": "2015-12-23 09:37:46",
+		"okkeyobject": "",
+		"resizemode": "kJSformResizeModeNone",
+		"screensize": "kSSZDesktop",
+		"serverlessclient": false,
+		"showascheckedout": false,
+		"showgrid": false,
+		"sizetogrid": false,
+		"startfield": 0,
+		"title": {
+			"type": 0,
+			"calc": "New remote form"
+		},
+		"top": 241,
+		"userinfo": "",
+		"version": "1",
+		"vertgrid": 8,
+		"vertscroll": false
+	},
+	"screensizes": [
+		{
+			"name": "kSSZDesktop",
+			"width": 795,
+			"height": 410
+		},
+		{
+			"name": "kSSZjs320x480Portrait",
+			"width": 320,
+			"height": 460
+		},
+		{
+			"name": "kSSZjs320x480Landscape",
+			"width": 480,
+			"height": 300
+		},
+		{
+			"name": "kSSZjs768x1024Portrait",
+			"width": 768,
+			"height": 1004
+		},
+		{
+			"name": "kSSZjs768x1024Landscape",
+			"width": 1004,
+			"height": 768
+		}
+	]
+}

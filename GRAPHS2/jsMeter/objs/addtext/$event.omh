@@ -1,0 +1,5 @@
+On evClick
+	Calculate iGraphObj.iAddText as iAddText
+	
+	;  redraw graph
+	Do method getSnapShot

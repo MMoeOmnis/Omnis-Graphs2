@@ -1,0 +1,17 @@
+On evClick
+	Do iBackColorList.$loadcols()
+	Switch iColor
+		Case 'White'
+			Do iGraphObj.$backgroundcolor.$assign(rgb(255,255,255))
+		Case 'Red'
+			Do iGraphObj.$backgroundcolor.$assign(rgb(255,0,0))
+		Case 'Green'
+			Do iGraphObj.$backgroundcolor.$assign(rgb(0,255,0))
+		Case 'Blue'
+			Do iGraphObj.$backgroundcolor.$assign(rgb(0,0,255))
+		Case 'Black'
+			Do iGraphObj.$backgroundcolor.$assign(rgb(0,0,0))
+	End Switch
+	
+	;  redraw graph
+	Do method getSnapShot

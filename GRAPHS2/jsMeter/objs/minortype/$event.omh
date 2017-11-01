@@ -1,0 +1,15 @@
+On evClick
+	
+	Do method buildGraph
+	
+	;  Hide/unhide addring and ringcolor depending on graph type
+	If pLineNumber=1
+		Do $cinst.$objs.addring.$visible.$assign(kTrue)
+		Do $cinst.$objs.ringcolor.$visible.$assign(iAddRing)
+	Else
+		Do $cinst.$objs.addring.$visible.$assign(kFalse)
+		Do $cinst.$objs.ringcolor.$visible.$assign(kFalse)
+	End If
+	
+	;  redraw graph
+	Do method getSnapShot

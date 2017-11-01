@@ -1,0 +1,7 @@
+On evClick
+	Do iBackgroundRaisedList.$loadcols(iBackgroundRaised)
+	Do iGraphObj.$backgroundraised.$assign(iBackgroundRaised)
+	Do iGraphObj.iBackgroundRaised.$assign(iBackgroundRaised)
+	
+	;  redraw graph
+	Do method getSnapShot
