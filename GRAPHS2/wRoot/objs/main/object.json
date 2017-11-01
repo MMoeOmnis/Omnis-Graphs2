@@ -1,0 +1,89 @@
+{
+	"ident": 1021,
+	"order": 1,
+	"objtype": "kTabPane",
+	"properties": {
+		"active": true,
+		"alpha": 255,
+		"backcolor": "kColorWindow",
+		"backgroundtheme": "kBGThemeNone",
+		"backpattern": 0,
+		"candropcursor": 0,
+		"contextmenu": "mContext",
+		"cursor": 0,
+		"desgroup": 0,
+		"designactive": true,
+		"deslock": false,
+		"dragborder": false,
+		"dragiconid": 0,
+		"dragmode": "kNoDragging",
+		"dragrange": "kRangeAll",
+		"dropmode": "kAcceptNone",
+		"edgefloat": "kEFnone",
+		"enabled": true,
+		"fieldstyle": "CtrlTabPane",
+		"font": 4,
+		"fontsize": 9,
+		"fontstyle": "kPlain",
+		"forecolor": "kColor3DFace",
+		"height": 445,
+		"helpfile": 0,
+		"imagenoroom": false,
+		"keyevents": false,
+		"left": 5,
+		"mouseevents": false,
+		"multirow": false,
+		"nodropcursor": 0,
+		"objlink": 0,
+		"rmouseevents": true,
+		"selectedtabcolor": "kColorDefault",
+		"showfocus": false,
+		"showimages": false,
+		"statusevents": false,
+		"tabcolor": "kColorDefault",
+		"taborient": "kTopTabs",
+		"tabstyle": "kDefaultPanes",
+		"textcolor": "kColorWindowText",
+		"tooltip": "",
+		"top": 5,
+		"userinfo": "",
+		"visible": true,
+		"width": 805
+	},
+	"multivalueproperties": {
+		"properties": [
+			{
+				"tabcaption": {
+					"type": 0,
+					"calc": "X-Y Graph"
+				},
+				"tabiconid": 0,
+				"tabtooltip": ""
+			},
+			{
+				"tabcaption": {
+					"type": 0,
+					"calc": "Pie Chart"
+				},
+				"tabiconid": 0,
+				"tabtooltip": ""
+			},
+			{
+				"tabcaption": {
+					"type": 0,
+					"calc": "Polar Chart"
+				},
+				"tabiconid": 0,
+				"tabtooltip": ""
+			},
+			{
+				"tabcaption": {
+					"type": 0,
+					"calc": "Meters & Gauges"
+				},
+				"tabiconid": 0,
+				"tabtooltip": ""
+			}
+		]
+	}
+}
