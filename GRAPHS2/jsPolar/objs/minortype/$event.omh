@@ -1,0 +1,9 @@
+On evClick
+	Do iPolarMinorTypeList.$loadcols()
+	Do iPolarGraphObj.$minorpolartype.$assign([iPolarMinorType])
+	
+	;  Used for drawing the 2nd layer in the $prelayout of the graph2object
+	Do iPolarGraphObj.iPolarType.$assign([iPolarMinorType])
+	
+	;  redraw graph
+	Do method getSnapShot

@@ -1,0 +1,17 @@
+On evClick
+	Do iBorderColorList.$loadcols()
+	Switch iColor
+		Case 'White'
+			Do iPolarGraphObj.$backgroundborder.$assign(rgb(255,255,255))
+		Case 'Red'
+			Do iPolarGraphObj.$backgroundborder.$assign(rgb(255,0,0))
+		Case 'Green'
+			Do iPolarGraphObj.$backgroundborder.$assign(rgb(0,255,0))
+		Case 'Blue'
+			Do iPolarGraphObj.$backgroundborder.$assign(rgb(0,0,255))
+		Case 'Black'
+			Do iPolarGraphObj.$backgroundborder.$assign(rgb(0,0,0))
+	End Switch
+	
+	;  redraw graph
+	Do method getSnapShot

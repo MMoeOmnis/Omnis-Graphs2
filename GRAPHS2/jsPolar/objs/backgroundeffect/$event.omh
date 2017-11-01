@@ -1,0 +1,6 @@
+On evClick
+	Do iBGEffectList.$loadcols()
+	Do iPolarGraphObj.$backgroundeffect.$assign([iBGEffect])
+	
+	;  redraw graph
+	Do method getSnapShot

@@ -1,0 +1,8 @@
+On evClick
+	Do iSymbolList.$loadcols()
+	;  Symbols set in the $prelayout of the graph2 object
+	Do iPolarGraphObj.iSymbol.$assign(iSymbol)
+	
+	;  Redraw graphs2 object
+	Do iPolarGraphObj.$snapshot(480,380) Returns iGraphSnapshot
+	Do $cinst.$redraw()

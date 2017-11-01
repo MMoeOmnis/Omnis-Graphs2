@@ -1,0 +1,18 @@
+On evClick
+	Do iLegendColorList.$loadcols()
+	Switch iColor
+		Case 'White'
+			Do iPolarGraphObj.$legendbackgroundcolor.$assign(rgb(255,255,255))
+		Case 'Red'
+			Do iPolarGraphObj.$legendbackgroundcolor.$assign(rgb(255,0,0))
+		Case 'Green'
+			Do iPolarGraphObj.$legendbackgroundcolor.$assign(rgb(0,255,0))
+		Case 'Blue'
+			Do iPolarGraphObj.$legendbackgroundcolor.$assign(rgb(0,0,255))
+		Case 'Black'
+			Do iPolarGraphObj.$legendbackgroundcolor.$assign(rgb(0,0,0))
+	End Switch
+	
+	;  Redraw graphs2 object
+	Do iPolarGraphObj.$snapshot(480,380) Returns iGraphSnapshot
+	Do $cinst.$redraw()

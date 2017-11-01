@@ -1,0 +1,21 @@
+On evClick
+	Do iLegendPosList.$loadcols()
+	Do iPolarGraphObj.$legendpos.$assign([iLegendPos])
+	
+	If iLegendPosList.$line=3
+		;  Hide legend properties
+		Do $cinst.$objs.legendcolor.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendcolorlabel.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffect.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffectlabel.$visible.$assign(kFalse)
+	Else
+		;  Unhide legend properties
+		Do $cinst.$objs.legendcolor.$visible.$assign(kTrue)
+		Do $cinst.$objs.legendcolorlabel.$visible.$assign(kTrue)
+		Do $cinst.$objs.legendeffect.$visible.$assign(kTrue)
+		Do $cinst.$objs.legendeffectlabel.$visible.$assign(kTrue)
+	End If
+	
+	;  Redraw graphs2 object
+	Do iPolarGraphObj.$snapshot(480,380) Returns iGraphSnapshot
+	Do $cinst.$redraw()

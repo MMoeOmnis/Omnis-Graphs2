@@ -1,0 +1,6 @@
+On evClick
+	Do iPolarGraphObj.$circulargrid.$assign(iCircularGrid)
+	
+	;  Redraw graphs2 object
+	Do iPolarGraphObj.$snapshot(480,380) Returns iGraphSnapshot
+	Do $cinst.$redraw()

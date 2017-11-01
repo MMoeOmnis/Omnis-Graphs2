@@ -1,0 +1,135 @@
+;  Enter your initialization code here
+;  Set-up the Meter Minor type selection dropdown list
+Do iMeterTypeList.$define(iMeterType)
+Do iMeterTypeList.$add(kG2meterAngular)
+Do iMeterTypeList.$add(kG2meterLinear)
+Do iMeterTypeList.$first()
+
+;  Set-up the background color effect selection dropdown list
+Do iBGEffectList.$define(iBGEffect)
+Do iBGEffectList.$add(kG2colorMetal)
+Do iBGEffectList.$add(kG2colorSolid)
+Do iBGEffectList.$first()
+
+;  Set-up the Background Raised combo box list
+Do iBackgroundRaisedList.$define(iBackgroundRaised)
+For iBackgroundRaised from -5 to 5 step 1     ;; values -5->5
+	Do iBackgroundRaisedList.$add(iBackgroundRaised)
+End For
+Do iBackgroundRaisedList.$line.$assign(6)
+Do iBackgroundRaisedList.$loadcols(iBackgroundRaised)     ;; used for ring calculations
+
+;  Set-up the color pickers' colors to coincide with that of the graphs2 component
+Do $cinst.$objs.backgroudColor.$contents.$assign(kWhite)
+Do $cinst.$objs.borderColor.$contents.$assign(kWhite)
+Do $cinst.$objs.pointerColor.$contents.$assign(kBlack)
+Do $cinst.$objs.ringColor.$contents.$assign(kBlack)
+
+;  Set-up backcolor list
+Do iBackColorList.$define(iColor)
+Do iBackColorList.$add('White')
+Do iBackColorList.$add('Red')
+Do iBackColorList.$add('Green')
+Do iBackColorList.$add('Blue')
+Do iBackColorList.$add('Black')
+Do iBackColorList.$line.$assign(1)
+
+;  Set-up bordercolor list
+Do iBorderColorList.$define(iColor)
+Do iBorderColorList.$add('White')
+Do iBorderColorList.$add('Red')
+Do iBorderColorList.$add('Green')
+Do iBorderColorList.$add('Blue')
+Do iBorderColorList.$add('Black')
+Do iBorderColorList.$line.$assign(1)
+
+;  Set-up angular color list
+Do iAngularColorList.$define(iColor)
+Do iAngularColorList.$add('White')
+Do iAngularColorList.$add('Red')
+Do iAngularColorList.$add('Green')
+Do iAngularColorList.$add('Blue')
+Do iAngularColorList.$add('Black')
+Do iAngularColorList.$line.$assign(5)
+
+;  Set-up radial color list
+Do iRadialColorList.$define(iColor)
+Do iRadialColorList.$add('White')
+Do iRadialColorList.$add('Red')
+Do iRadialColorList.$add('Green')
+Do iRadialColorList.$add('Blue')
+Do iRadialColorList.$add('Black')
+Do iRadialColorList.$line.$assign(5)
+
+;  Set-up legend color list
+Do iLegendColorList.$define(iColor)
+Do iLegendColorList.$add('White')
+Do iLegendColorList.$add('Red')
+Do iLegendColorList.$add('Green')
+Do iLegendColorList.$add('Blue')
+Do iLegendColorList.$add('Black')
+Do iLegendColorList.$line.$assign(1)
+
+;  Set-up symbol list
+Do iSymbolList.$define(iSymbol)
+Do iSymbolList.$add(kG2symbolCircle)
+Do iSymbolList.$add(kG2symbolCross)
+Do iSymbolList.$add(kG2symbolCross2)
+Do iSymbolList.$add(kG2symbolDiamond)
+Do iSymbolList.$add(kG2symbolInvertedTriangle)
+Do iSymbolList.$add(kG2symbolLeftTriangle)
+Do iSymbolList.$add(kG2symbolNone)
+Do iSymbolList.$add('kG2symbolRightTriangle')
+Do iSymbolList.$add(kG2symbolSquare)
+Do iSymbolList.$add(kG2symbolTriangle)
+Do iSymbolList.$line.$assign(7)
+
+;  Set-up line width list
+Do iLineWidthList.$define(iLineWidth)
+For iLineWidth from 1 to 5 step 1
+	Do iLineWidthList.$add(iLineWidth)
+End For
+Do iLineWidthList.$line.$assign(1)
+
+;  Set-up minor polar type list
+Do iPolarMinorTypeList.$define(iPolarMinorType)
+Do iPolarMinorTypeList.$add(kG2polarArea)
+Do iPolarMinorTypeList.$add(kG2polarLine)
+Do iPolarMinorTypeList.$add(kG2polarSplineArea)
+Do iPolarMinorTypeList.$add(kG2polarSplineLine)
+Do iPolarMinorTypeList.$line.$assign(4)
+Do iPolarMinorTypeList.$loadcols()
+Do iPolarGraphObj.iPolarType.$assign(iPolarMinorType)
+
+;  Set-up legendpos list
+Do iLegendPosList.$define(iLegendPos)
+Do iLegendPosList.$add(kG2legendBottom)
+Do iLegendPosList.$add(kG2legendLeft)
+;  Do iLegendPosList.$add(kG2legendManual)
+Do iLegendPosList.$add(kG2legendNone)
+Do iLegendPosList.$add(kG2legendRight)
+Do iLegendPosList.$add(kG2legendTop)
+Do iLegendPosList.$line.$assign(3)
+Do iLegendPosList.$loadcols()
+
+;  Set-up legend effect list
+Do iLegendEffectList.$define(iLegendEffect)
+Do iLegendEffectList.$add(kG2colorSolid)
+Do iLegendEffectList.$add(kG2colorMetal)
+Do iLegendEffectList.$line.$assign(1)
+
+;  Set-up graph object initial property values
+Do iPolarGraphObj.$angularcolor.$assign(rgb(0,0,0))
+Do iPolarGraphObj.$backgroundcolor.$assign(rgb(255,255,255))
+Do iPolarGraphObj.$backgroundborder.$assign(rgb(255,255,255))
+Do iPolarGraphObj.$backgroundeffect.$assign(kG2colorMetal)
+Do iPolarGraphObj.$columnheadings.$assign('iColList')
+Do iPolarGraphObj.$legendbackgroundcolor.$assign(rgb(255,255,255))
+Do iPolarGraphObj.$legendpos.$assign([iLegendPos])
+Do iPolarGraphObj.$majortype.$assign(kG2polar)
+Do iPolarGraphObj.$minorpolartype.$assign([iPolarMinorType])
+Do iPolarGraphObj.$offsetwidth.$assign(40)
+Do iPolarGraphObj.$radialcolor.$assign(rgb(0,0,0))
+
+Do method buildGraph
+Do method getSnapShot

@@ -1,0 +1,8 @@
+On evClick
+	Do iLineWidthList.$loadcols()
+	;  Line width altered in $prelayout of the graphs2 object
+	Do iPolarGraphObj.iLineWidth.$assign(iLineWidth)
+	
+	;  Redraw graphs2 object
+	Do iPolarGraphObj.$snapshot(480,380) Returns iGraphSnapshot
+	Do $cinst.$redraw()

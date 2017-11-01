@@ -1,0 +1,5 @@
+On evClick
+	Do iPolarGraphObj.$roundedframe.$assign(iRoundedFrame)
+	
+	;  redraw graph
+	Do method getSnapShot
