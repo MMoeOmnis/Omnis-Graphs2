@@ -1,0 +1,21 @@
+On evPreLayout
+	Do iLayerList.$define(lItemName,lRadius,lAngle)
+	Do iLayerList.$add("",80,40)
+	Do iLayerList.$add("",91,65)
+	Do iLayerList.$add("",66,88)
+	Do iLayerList.$add("",80,110)
+	Do iLayerList.$add("",92,150)
+	Do iLayerList.$add("",87,200)
+	Do $cobj.$getmainlayer() Returns lLayerObject
+	Do lLayerObject.$setlinewidth(2)
+	Do lLayerObject.$setsymbol(kG2symbolTriangle,11)
+	Do lLayerObject.$setdatalabelformat("({value},{angle})")
+	
+	Do iColumnHeadings.$define(lColumnName)
+	Do iColumnHeadings.$add("Open loop")
+	Do $cobj.$addlinelayer(iLayerList) Returns lLayerObject
+	Do $cobj.$setlinearscale(kG2axisAngular,0,360,30)
+	Do lLayerObject.$setlinewidth(2)
+	Do lLayerObject.$setcloseloop(kFalse)
+	Do lLayerObject.$setsymbol(kG2symbolDiamond,11)
+	Do lLayerObject.$setDataLabelFormat("({value},{angle})")

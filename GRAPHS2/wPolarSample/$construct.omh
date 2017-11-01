@@ -1,0 +1,13 @@
+Do iGraphList.$define(lItemName,lRadius,lAngle)
+Do iGraphList.$add("",90,15)
+Do iGraphList.$add("",25,60)
+Do iGraphList.$add("",40,110)
+Do iGraphList.$add("",55,180)
+Do iGraphList.$add("",68,230)
+Do iGraphList.$add("",44,260)
+Do iGraphList.$add("",79,260)
+Do iGraphList.$add("",85,310)
+Do iGraphList.$add("",50,340)
+
+Do iColumnHeadings.$define(lColumnName)
+Do iColumnHeadings.$add("Closed loop")
