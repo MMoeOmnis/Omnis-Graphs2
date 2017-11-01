@@ -1,0 +1,6 @@
+On evClick
+	If pos('$objs',iItemRef.$fullname)
+		Do iItemRef.$methods.//$event//.$modify
+	Else
+		Modify methods {[iItemRef.$name]}
+	End If
