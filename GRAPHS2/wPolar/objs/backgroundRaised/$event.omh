@@ -1,0 +1,7 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+	Do iBackgroundRaisedList.$loadcols(iBackgroundRaised)
+	Do $cinst.$objs.polarGraph.$backgroundraised.$assign(iBackgroundRaised)
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

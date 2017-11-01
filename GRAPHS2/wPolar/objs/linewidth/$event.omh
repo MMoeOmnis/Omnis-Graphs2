@@ -1,0 +1,9 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+	;  width
+	Do iLineWidthList.$loadcols()
+	Do $cinst.$objs.polarGraph.$dispose()
+	Do $cinst.$redraw()
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

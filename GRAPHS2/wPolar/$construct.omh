@@ -1,0 +1,97 @@
+;  Set-up graph data
+Do iGraphList.$define(lLabel,lRadius,lAngle)
+Do iGraphList.$add("",5.1,0)
+Do iGraphList.$add("",2.6,15)
+Do iGraphList.$add("",1.5,30)
+Do iGraphList.$add("",2.2,45)
+Do iGraphList.$add("",5.1,60)
+Do iGraphList.$add("",4.3,75)
+Do iGraphList.$add("",4.0,90)
+Do iGraphList.$add("",9.0,105)
+Do iGraphList.$add("",1.7,120)
+Do iGraphList.$add("",8.8,135)
+Do iGraphList.$add("",9.9,150)
+Do iGraphList.$add("",9.5,165)
+Do iGraphList.$add("",9.4,180)
+Do iGraphList.$add("",1.8,195)
+Do iGraphList.$add("",2.1,210)
+Do iGraphList.$add("",2.3,225)
+Do iGraphList.$add("",3.5,240)
+Do iGraphList.$add("",7.7,255)
+Do iGraphList.$add("",8.8,270)
+Do iGraphList.$add("",6.1,285)
+Do iGraphList.$add("",5.0,300)
+Do iGraphList.$add("",3.1,315)
+Do iGraphList.$add("",6.0,330)
+Do iGraphList.$add("",4.3,345)
+
+;  Set-up column name list
+Do iColList.$define(lSetName)
+Do iColList.$add('Set 1')
+
+;  Set-up kG2polarMinortype list
+Do iPolarTypeList.$define(iPolarType)
+Do iPolarTypeList.$add(kG2polarArea)
+Do iPolarTypeList.$add(kG2polarLine)
+Do iPolarTypeList.$add(kG2polarSplineArea)
+Do iPolarTypeList.$add(kG2polarSplineLine)
+Do iPolarTypeList.$line.$assign(4)
+Do iPolarTypeList.$loadcols()
+
+;  Set-up the background color effect selection dropdown list
+Do iBGEffectList.$define(iBGEffect)
+Do iBGEffectList.$add(kG2colorMetal)
+Do iBGEffectList.$add(kG2colorSolid)
+Do iBGEffectList.$first()
+
+;  Set-up the Background Raised combo box list
+Do iBackgroundRaisedList.$define(iBackgroundRaised)
+For iBackgroundRaised from -5 to 5 step 1     ;; values -5->5
+	Do iBackgroundRaisedList.$add(iBackgroundRaised)
+End For
+Do iBackgroundRaisedList.$line.$assign(6)
+
+;  Set-up line width list
+Do iLineWidthList.$define(iLineWidth)
+For iLineWidth from 1 to 5 step 1
+	Do iLineWidthList.$add(iLineWidth)
+End For
+Do iLineWidthList.$line.$assign(1)
+Do iLineWidthList.$loadcols()
+
+;  Set-up symbol
+Do iSymbolList.$define(iSymbol)
+Do iSymbolList.$add(kG2symbolCross)
+Do iSymbolList.$add(kG2symbolCross2)
+Do iSymbolList.$add(kG2symbolDiamond)
+Do iSymbolList.$add(kG2symbolInvertedTriangle)
+Do iSymbolList.$add(kG2symbolLeftTriangle)
+Do iSymbolList.$add(kG2symbolNone)     ;; default
+Do iSymbolList.$add('kG2symbolRightTriangle')     ;; stgf303
+Do iSymbolList.$add(kG2symbolSquare)
+Do iSymbolList.$add(kG2symbolTriangle)
+Do iSymbolList.$line.$assign(6)
+Do iSymbolList.$loadcols()
+
+;  Setup legenpos values
+Do iLegendPosList.$define(iLegendPos)
+Do iLegendPosList.$add(kG2legendNone)
+Do iLegendPosList.$add(kG2legendBottom)
+Do iLegendPosList.$add(kG2legendLeft)
+;  Do iLegendPos.$add(kG2legendManual)
+Do iLegendPosList.$add(kG2legendRight)
+Do iLegendPosList.$add(kG2legendTop)
+Do iLegendPosList.$line.$assign(1)
+
+;  Set-up the legend background color effect list
+Do iLegendEffectList.$define(iBGEffect)
+Do iLegendEffectList.$add(kG2colorMetal)
+Do iLegendEffectList.$add(kG2colorSolid)
+Do iLegendEffectList.$line.$assign(2)
+
+;  Set-up color picker lists
+Do $cinst.$objs.backgroundColor.$contents.$assign($cinst.$objs.polarGraph.$backgroundcolor)
+Do $cinst.$objs.borderColor.$contents.$assign($cinst.$objs.polarGraph.$backgroundborder)
+Do $cinst.$objs.angularcolor.$contents.$assign($cinst.$objs.polarGraph.$angularcolor)
+Do $cinst.$objs.radialcolor.$contents.$assign($cinst.$objs.polarGraph.$radialcolor)
+Do $cinst.$objs.legendcolor.$contents.$assign($cinst.$objs.polarGraph.$legendbackgroundcolor)

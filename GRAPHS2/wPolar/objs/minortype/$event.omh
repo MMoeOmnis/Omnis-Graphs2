@@ -1,0 +1,14 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+	Do iPolarTypeList.$loadcols()
+	Do $cinst.$objs.polarGraph.$minorpolartype.$assign([iPolarType])
+	
+	If iPolarTypeList.$line=2|iPolarTypeList.$line=4
+		Do $cinst.$objs.linewidth.$visible.$assign(kTrue)
+	Else
+		Do $cinst.$objs.linewidth.$visible.$assign(kFalse)
+	End If
+	Do $cinst.$redraw()
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

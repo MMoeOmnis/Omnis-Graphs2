@@ -1,0 +1,4 @@
+On evRMouseDown
+	;  has to be hard coded due to being run from a subwindow of another window
+	Set reference lObjItemRef to $clib.$windows.wPolar
+	Do $cwind.$setItemRef(lObjItemRef)

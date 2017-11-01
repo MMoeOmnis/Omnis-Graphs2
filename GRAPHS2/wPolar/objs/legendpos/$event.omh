@@ -1,0 +1,15 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+	Do iLegendPosList.$loadcols()
+	Do $cinst.$objs.polarGraph.$legendpos.$assign([iLegendPos])
+	
+	If iLegendPosList.$line=1
+		Do $cinst.$objs.legendcolor.$visible.$assign(kFalse)
+		Do $cinst.$objs.legendeffect.$visible.$assign(kFalse)
+	Else
+		Do $cinst.$objs.legendcolor.$visible.$assign(kTrue)
+		Do $cinst.$objs.legendeffect.$visible.$assign(kTrue)
+	End If
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)
