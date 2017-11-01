@@ -1,5 +1,7 @@
 # Omnis-Graphs2
 Library to demonstrate use of Graph2 external component.
+For more info:
+http://www.omnis.net/documentation/extendingomnis/index.jsp?detail=08Graph2.html#chapter-8omnis-graphs
 
 For Omnis Studio 8.1.2 and above.
 
