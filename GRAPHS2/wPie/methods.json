@@ -1,0 +1,68 @@
+[
+	{
+		"name": "$construct",
+		"ident": 1,
+		"order": 1,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "%objs",
+				"order": 4,
+				"type": "kNumber",
+				"subtype": "kFloatdp",
+				"sublen": 0
+			},
+			{
+				"name": "lExpenses",
+				"order": 2,
+				"type": "kNumber",
+				"subtype": "k2dpShortnum",
+				"sublen": 0
+			},
+			{
+				"name": "lName",
+				"order": 3,
+				"type": "kCharacter",
+				"subtype": "kSimplechar",
+				"sublen": 100000000
+			},
+			{
+				"name": "lSales",
+				"order": 1,
+				"type": "kNumber",
+				"subtype": "k2dpShortnum",
+				"sublen": 0
+			}
+		]
+	},
+	{
+		"name": "$destruct",
+		"ident": 2,
+		"order": 2,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+
+		]
+	},
+	{
+		"name": "$event",
+		"ident": 0,
+		"order": 3,
+		"pvardefs": [
+
+		],
+		"lvardefs": [
+			{
+				"name": "lObjItemRef",
+				"order": 1,
+				"type": "kItemref",
+				"subtype": "",
+				"sublen": 0
+			}
+		]
+	}
+]

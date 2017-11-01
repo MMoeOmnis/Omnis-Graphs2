@@ -1,0 +1,29 @@
+;  Set-up graph data
+Do iGraphList.$define(lName,lSales,lExpenses)
+Do iGraphList.$add('Andy',84,42)
+Do iGraphList.$add('Sam',80,40)
+Do iGraphList.$add('Liza',92,46)
+Do iGraphList.$add('Harry',46,23)
+
+;  Set-up slider values
+Do $cinst.$objs.pieGraph.$tilt.$assign($cinst.$objs.tiltslider.$val)
+Do $cinst.$objs.pieGraph.$rotate.$assign($cinst.$objs.rotateslider.$val)
+Do $cinst.$objs.pieGraph.$depth.$assign($cinst.$objs.depth.$val)
+Do $cinst.$objs.pieGraph.$labelpos.$assign($cinst.$objs.labelposSlider.$val)
+
+;  Set-up the background color effect selection dropdown list
+Do iBGEffectList.$define(iBGEffect)
+Do iBGEffectList.$add(kG2colorMetal)
+Do iBGEffectList.$add(kG2colorSolid)
+Do iBGEffectList.$first()
+
+;  Set-up the Background Raised combo box list
+Do iBackgroundRaisedList.$define(iBackgroundRaised)
+For iBackgroundRaised from -5 to 5 step 1     ;; values -5->5
+	Do iBackgroundRaisedList.$add(iBackgroundRaised)
+End For
+Do iBackgroundRaisedList.$line.$assign(6)
+
+;  Set-up the color pickers' colors to coincide with that of the graphs2 component
+Do $cinst.$objs.backgroudColor.$contents.$assign($cinst.$objs.pieGraph.$backgroundcolor)
+Do $cinst.$objs.borderColor.$contents.$assign($cinst.$objs.pieGraph.$backgroundborder)

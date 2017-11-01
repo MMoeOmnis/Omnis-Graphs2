@@ -1,0 +1,10 @@
+
+Do $cinst.$objs.pieGraph.$labelposon.$assign(iUseLabelPositions)
+
+;  Hide/display labelposslider and showfeeler dependent on $labelposon value
+Do $cinst.$objs.labelposSlider.$visible.$assign(iUseLabelPositions)
+Do $cinst.$objs.showfeeler.$visible.$assign(not(iSideLayout|iUseLabelPositions))
+
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

@@ -1,0 +1,6 @@
+On evNewValue
+	Do $cinst.$objs.pieGraph.$depth.$assign(pNewVal)
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

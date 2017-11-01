@@ -1,0 +1,6 @@
+On evNewValue
+	Calculate $cinst.$objs.pieGraph.$rotate as pNewVal
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

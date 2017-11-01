@@ -1,0 +1,6 @@
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)
+	
+On evGraphClick
+	OK message Graph Item Clicked {Item Number [pItem] ([pItemname])}

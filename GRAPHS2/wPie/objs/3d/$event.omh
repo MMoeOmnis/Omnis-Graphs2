@@ -1,0 +1,11 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+	Do $cinst.$objs.pieGraph.$3d.$assign(i3D)
+	
+	;  Hide tilt properties when i3D is kFalse
+	Do $cinst.$objs.tilton.$visible.$assign(i3D)
+	Do $cinst.$objs.tiltslider.$visible.$assign(i3D&iTiltOn)
+	Do $cinst.$objs.depth.$visible.$assign(i3D)
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

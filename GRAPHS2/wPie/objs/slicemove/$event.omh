@@ -1,0 +1,6 @@
+On evNewValue
+	Do $cinst.$objs.pieGraph.$slicemove(pNewVal,"0,1,2,3")
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)

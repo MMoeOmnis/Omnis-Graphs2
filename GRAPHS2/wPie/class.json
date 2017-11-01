@@ -1,0 +1,214 @@
+{
+	"classtype": "kWindow",
+	"internalversion": 3,
+	"designtaskname": "StartupTask",
+	"nextident": 1059,
+	"lastgroupident": 0,
+	"cvardefs": [
+
+	],
+	"ivardefs": [
+		{
+			"name": "i3D",
+			"order": 2,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "$cinst.$objs.pieGraph.$3d"
+		},
+		{
+			"name": "iBackgroundRaised",
+			"order": 17,
+			"type": "kInteger",
+			"subtype": "k32bitint",
+			"sublen": 0,
+			"initval": "0"
+		},
+		{
+			"name": "iBackgroundRaisedList",
+			"order": 16,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iBGEffect",
+			"order": 14,
+			"type": "kCharacter",
+			"subtype": "kSimplechar",
+			"sublen": 100000000
+		},
+		{
+			"name": "iBGEffectList",
+			"order": 13,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iCustLabel",
+			"order": 5,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iDrawClockwise",
+			"order": 4,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "$cinst.$objs.pieGraph.$drawclockwise"
+		},
+		{
+			"name": "iDrawFrames",
+			"order": 9,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "$cinst.$objs.pieGraph.$frameon"
+		},
+		{
+			"name": "iGraphList",
+			"order": 1,
+			"type": "kList",
+			"subtype": "",
+			"sublen": 0
+		},
+		{
+			"name": "iRoundedFrame",
+			"order": 15,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iShadow",
+			"order": 10,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iShowFeeler",
+			"order": 3,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "$cinst.$objs.pieGraph.$showfeeler"
+		},
+		{
+			"name": "iSideLayout",
+			"order": 11,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "$cinst.$objs.pieGraph.$sidelayout"
+		},
+		{
+			"name": "iSliceDepth",
+			"order": 6,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iTiltOn",
+			"order": 8,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "$cinst.$objs.pieGraph.$tilton"
+		},
+		{
+			"name": "iTransparent",
+			"order": 7,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0
+		},
+		{
+			"name": "iUseLabelPositions",
+			"order": 12,
+			"type": "kBoolean",
+			"subtype": 0,
+			"sublen": 0,
+			"initval": "$cinst.$objs.pieGraph.$labelposon"
+		}
+	],
+	"properties": {
+		"aligntogrid": false,
+		"alpha": 255,
+		"backcolor": "kColor3DFace",
+		"backgroundskin": 0,
+		"backgroundskinalign": "kPALtopLeft",
+		"backgroundtheme": "kBGThemeWindow",
+		"backpattern": 0,
+		"bringinfront": false,
+		"clickbehind": true,
+		"closebox": true,
+		"collectperformancedata": false,
+		"componenticon": 0,
+		"componenttype": "kCompStoreHidden",
+		"contextmenu": "",
+		"createdate": "2016-12-13 14:54:00",
+		"desc": "",
+		"dockingedge": "kBorderChisel",
+		"dropmode": "kAcceptNone",
+		"edgefloat": "kEFnone",
+		"editor": "",
+		"editordata": "",
+		"effect": "kBorderNone",
+		"enablemenuandtoolbars": true,
+		"external": false,
+		"forecolor": "kColor3DFace",
+		"growbox": true,
+		"hasmenus": false,
+		"hasstatusbar": false,
+		"height": 410,
+		"helpbutton": false,
+		"helpfile": 0,
+		"horzgrid": 8,
+		"horzscroll": false,
+		"inheritedorder": 1,
+		"issubwindow": true,
+		"issupercomponent": false,
+		"keepclicks": true,
+		"left": 245,
+		"menuedge": "kBorderChisel",
+		"menunames": "",
+		"minimizebox": false,
+		"minimizeiconid": 2006,
+		"moddate": "2016-09-23 12:17:21",
+		"modelessdata": true,
+		"showascheckedout": false,
+		"showcommands": false,
+		"showgrid": false,
+		"showtitle": false,
+		"sizetogrid": false,
+		"startfield": 0,
+		"statusbarpos": "kSBPosBottom",
+		"statusedge": "kBorderChisel",
+		"style": "kTitle",
+		"title": "",
+		"toolbarnames": "",
+		"toolbaroptions": "kTBOptionNone",
+		"toolbarpos": "kDockingAreaNone",
+		"top": 42,
+		"userinfo": "",
+		"usesheets": false,
+		"version": "1",
+		"vertgrid": 8,
+		"vertscroll": false,
+		"width": 795,
+		"zoombox": false
+	},
+	"statusbar": {
+		"properties": {
+			"fieldstyle": "",
+			"font": 1,
+			"fontsize": 0,
+			"helppane": 0
+		}
+	}
+}

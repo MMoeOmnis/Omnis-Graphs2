@@ -1,0 +1,11 @@
+On evClick     ;; Event Parameters - pRow ( Itemreference )
+	If iSliceDepth
+		;  Depth value is specified as the 3rd column of iGraphList
+		Calculate $cinst.$objs.pieGraph.$depthcolumn as 3
+	Else
+		Calculate $cinst.$objs.pieGraph.$depthcolumn as 0
+	End If
+	
+On evRMouseDown
+	Set reference lObjItemRef to $cobj
+	Do $cwind.$setItemRef(lObjItemRef)
