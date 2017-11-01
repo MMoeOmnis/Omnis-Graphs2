@@ -1,0 +1,53 @@
+;  Enter your initialization code here
+;  Set-up the Meter Minor type selection dropdown list
+Do iMeterTypeList.$define(iMeterType)
+Do iMeterTypeList.$add(kG2meterAngular)
+Do iMeterTypeList.$add(kG2meterLinear)
+Do iMeterTypeList.$first()
+
+;  Set-up the background color effect selection dropdown list
+Do iBGEffectList.$define(iBGEffect)
+Do iBGEffectList.$add(kG2colorMetal)
+Do iBGEffectList.$add(kG2colorSolid)
+Do iBGEffectList.$first()
+
+;  Set-up the Background Raised combo box list
+Do iBackgroundRaisedList.$define(iBackgroundRaised)
+For iBackgroundRaised from -5 to 5 step 1     ;; values -5->5
+	Do iBackgroundRaisedList.$add(iBackgroundRaised)
+End For
+Do iBackgroundRaisedList.$line.$assign(6)
+Do iBackgroundRaisedList.$loadcols(iBackgroundRaised)     ;; used for ring calculations
+
+;  Set-up graph object initial values
+Do iGraphObj.$majortype.$assign(kG2pie)
+Do iGraphObj.$backgroundcolor.$assign(rgb(0,0,255))
+Do iGraphObj.$backgroundeffect.$assign(kG2colorMetal)
+Do iGraphObj.$roundedframe.$assign(kTrue)
+Do iGraphObj.$legendpos.$assign(kG2legendNone)
+Do iGraphObj.$depth.$assign(20)
+Do iGraphObj.$drawclockwise.$assign(iDrawClockwise)
+Do iGraphObj.$showfeeler.$assign(iShowFeeler)
+Do iGraphObj.$frameon.$assign(iFrameOn)
+
+;  Set-up backcolor list
+Do iBackColorList.$define(iColor)
+Do iBackColorList.$add('White')
+Do iBackColorList.$add('Red')
+Do iBackColorList.$add('Green')
+Do iBackColorList.$add('Blue')
+Do iBackColorList.$add('Black')
+Do iBackColorList.$line.$assign(4)
+
+;  Set-up bordercolor list
+Do iBorderColorList.$define(iColor)
+Do iBorderColorList.$add('White')
+Do iBorderColorList.$add('Red')
+Do iBorderColorList.$add('Green')
+Do iBorderColorList.$add('Blue')
+Do iBorderColorList.$add('Black')
+Do iBorderColorList.$line.$assign(1)
+
+Do method buildGraph
+
+Do method getSnapShot

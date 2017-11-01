@@ -1,0 +1,5 @@
+On evClick
+	Do iGraphObj.$shadow.$assign(iShadow)
+	
+	;  redraw graph
+	Do method getSnapShot

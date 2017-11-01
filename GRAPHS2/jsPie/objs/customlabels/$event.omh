@@ -1,0 +1,9 @@
+On evClick
+	If iCustLabel
+		Calculate iGraphObj.$labelformat as con("{label} ${value}K",chr(10),"({percent}%)")
+	Else
+		Calculate iGraphObj.$labelformat as ""
+	End If
+	
+	;  redraw graph
+	Do method getSnapShot

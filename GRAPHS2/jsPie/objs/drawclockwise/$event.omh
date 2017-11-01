@@ -1,0 +1,5 @@
+On evClick
+	Do iGraphObj.$drawclockwise.$assign(iDrawClockwise)
+	
+	;  redraw graph
+	Do method getSnapShot

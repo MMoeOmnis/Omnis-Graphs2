@@ -1,0 +1,52 @@
+{
+	"ident": 1022,
+	"order": 21,
+	"objtype": "kComponent",
+	"componentlib": "jsSlider",
+	"componentctrl": "Slider Control",
+	"properties": {
+		"::max": 99,
+		"::min": 0,
+		"::vertical": false,
+		"alpha": 255,
+		"backalpha": 255,
+		"backcolor": "kColorWindow",
+		"bordercolor": "RGB(0,0,0)",
+		"contextmenu": "",
+		"cssclassname": "",
+		"desgroup": 0,
+		"designactive": true,
+		"deslock": false,
+		"disabledefaultcontextmenu": false,
+		"disablesystemfocus": false,
+		"dropmode": "kAcceptNone",
+		"effect": "kJSborderNone",
+		"enabled": true,
+		"events": "evEndSlider,evNewValue",
+		"fieldstyle": "",
+		"horzmargin": 10,
+		"linestyle": 1,
+		"objlink": 0,
+		"preventlayoutanimation": false,
+		"sliderhorziconid": 1908,
+		"sliderverticonid": 1908,
+		"step": 0,
+		"tooltip": "",
+		"userinfo": "",
+		"val": 0,
+		"vertmargin": 10,
+		"visible": true
+	},
+	"screensizes": [
+		{
+			"name": "kSSZDesktop",
+			"left": 635,
+			"top": 275,
+			"width": 150,
+			"height": 20,
+			"edgefloat": "kEFnone",
+			"dragborder": false,
+			"errortextpos": "kJSErrorTextPosUnder"
+		}
+	]
+}

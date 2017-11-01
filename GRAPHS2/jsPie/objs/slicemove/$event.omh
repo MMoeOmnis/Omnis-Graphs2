@@ -1,0 +1,6 @@
+On evNewValue
+	Do iGraphObj.$slicemove(pSliderValue,"0,1,2,3")
+	
+On evEndSlider
+	;  redraw graph
+	Do method getSnapShot

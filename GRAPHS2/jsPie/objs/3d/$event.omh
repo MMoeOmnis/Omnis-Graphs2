@@ -1,0 +1,11 @@
+On evClick
+	Do iGraphObj.$3d.$assign(i3d)
+	
+	;  Hide tilt properties when i3D is kFalse
+	Do $cinst.$objs.tilton.$visible.$assign(i3d)
+	Do $cinst.$objs.tiltslider.$visible.$assign(i3d&iTiltOn)
+	Do $cinst.$objs.depthslider.$visible.$assign(i3d)
+	Do $cinst.$objs.shadow.$visible.$assign(i3d)
+	
+	;  redraw graph
+	Do method getSnapShot

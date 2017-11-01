@@ -1,0 +1,10 @@
+On evClick
+	Do iGraphObj.$labelposon.$assign(iLabelPosOn)
+	
+	;  Hide/display labelposslider dependent on the value of labelposon
+	Do $cinst.$objs.labelposslider.$visible.$assign(iLabelPosOn)
+	;  Hide/display labelposslider dependent on the value of labelposon
+	Do $cinst.$objs.showfeeler.$visible.$assign(not(iSideLayout|iLabelPosOn))
+	
+	;  redraw graph
+	Do method getSnapShot

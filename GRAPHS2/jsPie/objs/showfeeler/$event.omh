@@ -1,0 +1,5 @@
+On evClick
+	Do iGraphObj.$showfeeler.$assign(iShowFeeler)
+	
+	;  redraw graph
+	Do method getSnapShot

@@ -1,0 +1,10 @@
+On evClick
+	;  Depth value is specified as the 3rd column of iGraphList
+	If iSliceDepth
+		Calculate iGraphObj.$depthcolumn as 3
+	Else
+		Calculate iGraphObj.$depthcolumn as 0
+	End If
+	
+	;  redraw graph
+	Do method getSnapShot

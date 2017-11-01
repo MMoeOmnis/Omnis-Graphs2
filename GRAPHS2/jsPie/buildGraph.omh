@@ -1,0 +1,7 @@
+Do iGraphList.$define(lName,lSales,lExpenses)
+Do iGraphList.$add('Andy',84,42)
+Do iGraphList.$add('Sam',80,40)
+Do iGraphList.$add('Liza',92,46)
+Do iGraphList.$add('Harry',46,23)
+
+Do iGraphObj.$dataname.$assign(iGraphList)

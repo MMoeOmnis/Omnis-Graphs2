@@ -1,0 +1,7 @@
+On evClick
+	Do iGraphObj.$tilton.$assign(iTiltOn)
+	;  Hide/unhide tilt slider
+	Do $cinst.$objs.tiltslider.$visible.$assign(iTiltOn)
+	
+	;  redraw graph
+	Do method getSnapShot

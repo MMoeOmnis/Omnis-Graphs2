@@ -1,0 +1,6 @@
+On evNewValue
+	Do iGraphObj.$tilt.$assign(pSliderValue)
+	
+On evEndSlider
+	;  redraw graph
+	Do method getSnapShot

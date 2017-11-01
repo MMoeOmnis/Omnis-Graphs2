@@ -1,0 +1,5 @@
+Do iGraphObj.$snapshot(480,380) Returns lSnapShot
+
+Do pictformat(lSnapShot) Returns lPicFormat
+Do pictconvto(lPicFormat,lSnapShot,'png') Returns iGraphSnapshot
+Calculate iGraphSnapshot as bytecon(iGraphSnapshot,"")

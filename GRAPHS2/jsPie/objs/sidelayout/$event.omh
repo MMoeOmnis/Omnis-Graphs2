@@ -1,0 +1,6 @@
+On evClick
+	Do iGraphObj.$sidelayout.$assign(iSideLayout)
+	Do $cinst.$objs.showfeeler.$visible.$assign(not(iSideLayout|iLabelPosOn))
+	
+	;  redraw graph
+	Do method getSnapShot
